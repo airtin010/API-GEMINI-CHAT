@@ -13,16 +13,12 @@ header {
   gap: 2rem;
 
   background-color: var(--bgcolorclean);
+}
 
-  & #addapi {
-    width: 45rem;
-    height: 100%;
-    right: 10rem;
 
-    & form {
-      position: relative;
 
-      button {
+
+.but {
         background-color: rgba(255, 255, 255, 0.753);
         border: 2px transparent solid;
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.171);
@@ -49,11 +45,20 @@ header {
         }
       }
 
-      & input {
+.addapi{
+    height: 100%;
+    right: 10rem;
+}
+
+.for{
+    position: relative;
+}
+
+.inp{
         font-family: var(--textfont);
         box-shadow: 0 0 20px rgba(255, 255, 255, 0.349);
         box-sizing: border-box;
-        border: 2px solid transparent;
+        border: 2px solid transparent; /* mantém o espaço */
         border-radius: 2rem;
         transition: border .3s ease-in-out;
         transition: box-shadow 0.3s ease;
@@ -75,7 +80,13 @@ header {
         color: var(--textcolor);
 
 
-      }
-    }
-  }
+}
+ 
+.sec{
+    width: 60%;
+}
+
+
+.smw{
+    width: 42rem;
 }
