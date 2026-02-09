@@ -1,54 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI CHAT</title>
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css"> 
 </head>
 <body>
-    <header>
-        <div>
-            <h1>
-                AI API.
-            </h1>
+    <header class="app-header">
+        <div class="header-title">
+            <h1>AI API.</h1>
             by gemini
         </div>
-        <div class="addapi smw">
-            <form class="for" action="">
-                <input class="inp" placeholder="envie sua api" type="text">
-                <button class="but">➤</button>
-            </form>
-        </div>
+
+        <form class="input-form input-form--header">
+            <input class="chat-input" placeholder="envie sua api" type="text">
+            <button class="send-button" type="submit">➤</button>
+        </form>
     </header>
 
-    <main>
-        <section id="secmain">
-            <div>
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quibusdam reiciendis sit dolorum similique quam fugiat dicta, molestiae sed illo aliquam sapiente reprehenderit rerum placeat corrupti quae repudiandae nesciunt molestias.</p>
-                </div>
+    <main class="chat-container">
+        <section class="messages">
+            <div class="message-bubble message-bubble--ai">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quibusdam reiciendis sit dolorum similique quam fugiat dicta, molestiae sed illo aliquam sapiente reprehenderit rerum placeat corrupti quae repudiandae nesciunt molestias.</p>
             </div>
 
-            <div class="usersend">
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quibusdam reiciendis sit dolorum similique quam fugiat dicta, molestiae sed illo aliquam sapiente reprehenderit rerum placeat corrupti quae repudiandae nesciunt molestias.</p>
-                </div>
+            <div class="message-bubble message-bubble--user">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quibusdam reiciendis sit dolorum similique quam fugiat dicta, molestiae sed illo aliquam sapiente reprehenderit rerum placeat corrupti quae repudiandae nesciunt molestias.</p>
             </div>
-
         </section>
     </main>
 
-    <section class="sec">
-        <div class="addapi">
-            <form class="for" action="">
-                <input class="inp" placeholder="envie sua api" type="text">
-                <button class="but">➤</button>
-            </form>
-        </div>
+    <section class="input-section">
+        <form class="input-form input-form--message">
+            <textarea class="chat-input" placeholder="Digite sua mensagem..." type="text"></textarea>
+            <button class="send-button" type="submit">➤</button>
+        </form>
     </section>
 </body>
 </html>
