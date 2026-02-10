@@ -3,42 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI CHAT</title>
+    <title>AI CHAT | Minimalist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/index.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="static/css/index.css"> 
 </head>
 <body>
     <header class="app-header">
         <div class="header-title">
             <h1>AI API.</h1>
-            by gemini
+            <span class="status-badge">Gemini 3 Flash</span>
         </div>
 
-        <form class="input-form input-form--header">
-            <input class="chat-input" placeholder="envie sua api" type="text">
-            <button class="send-button" type="submit">➤</button>
+        <form class="input-form input-form--header" id="config-form">
+            <div class="input-wrapper">
+                <i class="ph ph-key"></i>
+                <input class="chat-input" id="api-input" placeholder="API Key..." type="password">
+            </div>
+            <button class="send-button send-button--small" type="submit">
+                <i class="ph ph-check"></i>
+            </button>
+
+            <button type="button" id="clear-api-btn" class="send-button send-button--small">
+                <i class="ph ph-trash"></i>
+            </button>
+
         </form>
     </header>
 
     <main class="chat-container">
-        <section class="messages">
+        <section class="messages" id="messages-flow">
             <div class="message-bubble message-bubble--ai">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quibusdam reiciendis sit dolorum similique quam fugiat dicta, molestiae sed illo aliquam sapiente reprehenderit rerum placeat corrupti quae repudiandae nesciunt molestias.</p>
-            </div>
-
-            <div class="message-bubble message-bubble--user">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quibusdam reiciendis sit dolorum similique quam fugiat dicta, molestiae sed illo aliquam sapiente reprehenderit rerum placeat corrupti quae repudiandae nesciunt molestias.</p>
+                <pre>Sistema pronto. Configure sua chave acima para começar.</pre>
             </div>
         </section>
     </main>
 
-    <section class="input-section">
-        <form class="input-form input-form--message">
-            <textarea class="chat-input" placeholder="Digite sua mensagem..." type="text"></textarea>
-            <button class="send-button" type="submit">➤</button>
+    <section class="input-section wrapper">
+        <form class="input-form input-form--message " id="chat-form">
+            <textarea class="chat-input messages" id="user-input" placeholder="Escreva sua mensagem..." rows="1"></textarea>
+            <button class="send-button" type="submit">
+                <i class="ph ph-paper-plane-right"></i>
+            </button>
         </form>
     </section>
+
+    <script type="module" src="static/js/index.js"></script>
 </body>
 </html>
